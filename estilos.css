@@ -1,0 +1,21 @@
+#titulo{
+    color:tomato;
+}
+
+.texto{
+    color: slateblue;
+}
+
+Table{   
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th , td{
+    border: solid 1px #eee;
+}
+tr:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
