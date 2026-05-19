@@ -1,111 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
     <title>Prueba</title>
-    <style>
-        table,th,td{
-            border: 1px solid black;
-
-        }
-    </style>
 </head>
-<body>
-    <table style="width: 500px;">
-       <thead>
-         <!--tr significa table row o fila tabla-->
-        <tr>
-            <!-- table header o tabla cabecera-->
-            <th> precio </th>
-            <th>producto </th>
+<body>  
+      <header>  
+        <h1 class="titulo_principal"> Tienda </h1>
+        <!--
+        <button id="Menu_princ" onclick="mostrar('Menu')"> O  </button> -->
         
-        </tr>
-
-       </thead>
-       <tbody>
-        <tr>
-            <td> haba </td>
-            <td> gratis </td>
-        </tr>
-        
-        <tr>
-            <td>jnajnskdj</td>
-            <td>$ 19.99 </td>
-        </tr>
-        <tr>
-            <td>ksdjbybvsubvbsvvslibvlsf</td>
-            <td>$ 244.00 </td>
-        </tr>
-       </tbody>
-       <tfoot>
-        <td></td>
-        <td> total: $263.99</td>
-       </tfoot>
-        
-    </table>
-    <!--lista no ordenada-->
-    <ul>
-        <li>elmento 1</li>
-        <li>elmento 2</li>
-        <li>elmento 3</li>
-        <li>elmento 4</li>
-        <li>elmento 5</li>
-    </ul>
-
-<!--lista ordenada-->
-    <ol>
-        <li>elmento 1</li>
-        <li>elmento 2</li>
-        <li>elmento 3</li>
-        <li>elmento 4</li>
-        <li>elmento 5</li>
-        <li>
-            <ol>
-                <li style="list-style-type: lower-alpha;">sub elemento 1</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 2</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 3</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 4</li>
-                <li style="list-style-type: lower-alpha;">sub elemento 5</li>
-            </ol>
-        </li>
-    </ol>
-
-
-
-
-
-
-
-
-
-    <form action="/formulario" method="POST">
-
-        <h1> Heding </h1>
-    <h2> nsaknskn</h2>
-    <h3>jvbsdjbv</h3>
-     <h4>isbfyf</h4>   
-        <h5>vjnsdjnvsbvlskd</h5>
-            <h6>jvbwibvs</h6>
-
-            <p> jbvsbvkbvkljbv</p>
-            <hr>
-    <label for="nombre"> Nombre </label>
-        <input value="uno" type="text" id="nombre" name="nombre" placeholder="Nombre">
-        <br>
-        <label for="comentario">comentario</label>
-        <br>
-        <input value="dos" type="apellido" id="apellido" name="apellido" placeholder="ingresa tu Apellido">
-        <br>
-        <textarea cols="50" rows="10" name="" id="comentario" placeholder="ingrese comentario"> este es un valor por defecto</textarea>
-        <br>
-        <!--<input value="3" type="submit"/>
-    -->
-        <button type="button"> tipo boton </button>
-        <button type="reset"> tipo reset</button>
-        <button type="submit"> enviar </button>
-
-    </form>
+        <nav id="Menu" class="menu" > <!-- style="display: none;" -->
+            <form>          
+                <ol>
+                    <li> <a  href="#" > Inicio </a></li>
+                    <li> <a  href="#" > Productos </a></li>
+                    <li> <a  href="almacen.html" > Almacen </a></li>
+                    <li> <a  href="#" > Cuentas </a></li>
+                </ol>
+            </form>
+        </nav>
+    </header>
+    
+    <script src="archivo.js"></script>
     
     
 </body>
