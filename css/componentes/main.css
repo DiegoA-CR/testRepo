@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --base1: #515B48;
+    --base2: #48515B;
+    --base3: #5B4851;
+
+    --principal: #2A8A14;
+    --secundario: #142A8A;
+    --complemento: #8A142A;
+    
+    --texto1: #ffffff;
+    --texto2: #000000;
+
+    --fondo: #d0d0d0;
+}
+
+body{
+    background-color: var(--fondo);
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 60px;
+    color: var(--principal);
+}
+.contenedor{
+    background-color: var(--texto1);
+    margin-top: 115px;
+    width: 100vw;
+    height: 60vh;
+    border: 1px solid var(--texto2);
+    display: flex;
+    
+}
+
+.card{
+    flex-direction: row;
+}
