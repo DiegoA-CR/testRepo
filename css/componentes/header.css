@@ -24,7 +24,7 @@
     
 }
 
-ol{
+.ol-menu{
     background-color: var(--base2);
     list-style: none;
     display: flex;
@@ -32,7 +32,7 @@ ol{
     
     }
 
-li {
+.li-menu {
     font-size: 25px;
     margin: 30px;
     gap: 10px;              
@@ -51,7 +51,7 @@ a {
     border-radius: 5px;
 }
 
-li a:hover {
+.li-menu a:hover {
     background-color: var(--base1);
     color: #ffffff;
     width: 180px;

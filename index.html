@@ -25,27 +25,30 @@
         
         <nav id="Menu" class="menu" > <!-- style="display: none;" -->
             <form>          
-                <ol>
-                    <li> <a  href="index.html" > Inicio </a></li>
-                    <li> <a  href="productos.html" > Productos </a></li>
-                    <li> <a  href="almacen.html" > Almacen </a></li>
-                    <li> <a  href="cuentas.html" > Cuentas </a></li>
+                <ol class="ol-menu">
+                    <li class="li-menu"> <a  href="index.html" > Inicio </a></li>
+                    <li class="li-menu"> <a  href="productos.html" > Productos </a></li>
+                    <li class="li-menu"> <a  href="almacen.html" > Almacen </a></li>
+                    <li class="li-menu"> <a  href="cuentas.html" > Cuentas </a></li>
                 </ol>
             </form>
         </nav>
     </header>
     <div class="contenedor">
         <div class="card">
-            <h3 class="titulo_productos"> Agregar producto(s) </h3>
+            <h3 class="titulo_productos"></h3>
             <form action="#">
-                <input id="producto" type="text" placeholder="Producto" value="submit" required>
+                <input id="producto" type="text" placeholder="Producto" value="text" required>
                 <input id="cantidad" type="number" placeholder="Cantidad" value="number" required>
                 <input type="text">
                 <input type="checkbox">
-                <button type="button" onclick="{objAgregarProducto}"> Agregar</button>
+                <button type="button" onclick="click"> Agregar </button>
             </form>
         </div>
         <div class="card">2</div>
+            <ul id="lista">
+
+            </ul>
         <div class="card">3</div>
         <div class="card">4</div>
     </div>
