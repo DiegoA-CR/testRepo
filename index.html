@@ -13,13 +13,13 @@
         <link rel="stylesheet" type="text/css" href="css/componentes/main.css">
         <link rel="stylesheet" type="text/css" href="css/componentes/header.css">
         
-
-
         <title>Tienda</title>
     </head>
+
     <body>
+        
     <h1 class="titulo_principal"> Tienda </h1>  
-      <header>  
+    <header>  
         <!--
         <button id="Menu_princ" onclick="mostrar('Menu')"> O  </button> -->
         
@@ -32,30 +32,36 @@
                     <li class="li-menu"> <a  href="cuentas.html" > Cuentas </a></li>
                 </ol>
             </form>
-            <p id="resultado"> </p>
         </nav>
     </header>
-    <div class="contenedor">
+
+<!-- MENU PRINCIPAL -->
+    
+<div class="contenedor">
         <div class="card">
             <h3 class="titulo_productos"></h3>
             <form action="#">
-                <input type="text" id="producto"  placeholder="Producto">
-                <input type="number" id="cantidad"  placeholder="Cantidad">
+                <input type="text" id="producto"  placeholder="Producto"><br>
+                <input type="number" id="cantidad"  placeholder="Cantidad"><br>
                 <button id="agregar"> Agregar </button>
                 <button id="verLista">Ver Lista </button>
                 <br>
                 <div id="resultado"> </div>
                 <br>
             </form>
-
-            <ul id="listaProductos"></ul>
+        <!-- termina el formulario -->
+            
 
         </div>
 
-        <div class="card">2</div>
-            <ul id="lista">
-
-            </ul>
+        <div class="card">
+            <p id="resultado"> </p>
+        
+            <ul id="listaProductos"></ul>
+        
+            <ul id="lista"></ul>
+        </div>
+            
         <div class="card">3</div>
         <div class="card">4</div>
     </div>
