@@ -32,18 +32,25 @@
                     <li class="li-menu"> <a  href="cuentas.html" > Cuentas </a></li>
                 </ol>
             </form>
+            <p id="resultado"> </p>
         </nav>
     </header>
     <div class="contenedor">
         <div class="card">
             <h3 class="titulo_productos"></h3>
             <form action="#">
-                <input id="producto" type="text" placeholder="Producto" value="text" required>
-                <input id="cantidad" type="number" placeholder="Cantidad" value="number" required>
-                <input type="text">
-                <input type="checkbox">
-                <button type="button" onclick="click"> Agregar </button>
+                <input type="text" id="producto"  placeholder="Producto">
+                <input type="number" id="cantidad"  placeholder="Cantidad">
+                <button id="agregar"> Agregar </button>
+                <br>
+                <p id="resultado"> </p>
+                <br>
             </form>
+
+            <ul id="listaProductos">
+
+            </ul>
+
         </div>
         <div class="card">2</div>
             <ul id="lista">

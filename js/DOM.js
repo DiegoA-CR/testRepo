@@ -1,9 +1,3 @@
-const 
-
-
-
-
-
 
 //document.querySelector(".titulo_productos").textContent = "Agregar producto(s)";
 //console.log(document.querySelector(".titulo_productos"));
@@ -29,16 +23,16 @@ const arrayElement = ['a','b','c','d'];
 // })
 
 
-const frag = document.createDocumentFragment();
-//const frag = new DocumentFragment();
+// const frag = document.createDocumentFragment();
+// //const frag = new DocumentFragment();
 
-arrayElement.forEach(elemt =>{
-    const li = document.createElement('li');
+// arrayElement.forEach(elemt =>{
+//     const li = document.createElement('li');
     
-    li.textContent = elemt;
-    frag.appendChild(li);
+//     li.textContent = elemt;
+//     frag.appendChild(li);
 
-//    console.log(frag);
-})
+// //    console.log(frag);
+// })
 
-ulLista.appendChild(frag);
+// ulLista.appendChild(frag);
