@@ -3,6 +3,7 @@ const nuevaCantidad = document.getElementById('cantidad');
 const agrega = document.getElementById('agregar');
 const resultado = document.getElementById('resultado');
 const listaProductos = document.getElementById('listaProductos');
+const verLista = document.getElementById('verLista');
 
 
 class EnviaProducto {
@@ -15,6 +16,8 @@ class EnviaProducto {
                 return `Producto: ${this.producto} - Cantidad: ${this.cantidad}`;
             }
         }
+
+        
 
         agrega.addEventListener('click', () => {
             const producto = nuevoProducto.value;
@@ -39,6 +42,7 @@ class EnviaProducto {
 const bdProductos = [];
 const bdCantidad = [];
 
+//Funcion principal para guardar
 
 function guardaResultado(){
     let gProducto = nuevoProducto.value;
@@ -50,19 +54,27 @@ function guardaResultado(){
         return;
     }
 
+const objProducto = new EnviaProducto(gProducto,gCantidad);
+const mensaje = objProducto.datosProducto();
 
-    //agregamos los datos al array
+
+
+    //Agregamos los datos al array
 
     bdProductos.push(gProducto);
     bdCantidad.push(gCantidad);
+
+    //Mostrar mensaje en el div resultado
+
+    resultado.textContent = `ok ${mensaje}`;
 
 //limpia los input
     nuevoProducto.value = "";
     nuevaCantidad.value = "";
 
-    console.log("Producto:", gProducto,  "Cantidad: ", gCantidad);
-    console.log("Todos los productos", bdProducto);
-    console.lod("Todas las cantidades", bdCantidad);
+    console.log("Producto:", gProducto,  " Cantidad: ", gCantidad);
+    console.log("Todos los productos", bdProductos);
+    console.log("Todas las cantidades", bdCantidad);
 
     //mostarar los valores de los arrays
 
@@ -72,10 +84,30 @@ function guardaResultado(){
 
 function mostrarLista(){
     listaProductos.innerHTML = "";
-    let i = 0;
-    for(i = 0; i<bdProductos,length; i++){
+
+    if(bdProductos.length === 0){
+        listaProductos.innerHTML = '<li>No hay productos guardados</li>';
+        return;
+    }
+    
+    for(let i = 0; i < bdProductos.length; i++){
         const li = document.createElement('li');
         li.textContent = `${bdProductos[i]} - Cantidad: ${bdCantidad[i]}`;
         listaProductos.appendChild(li);
       }
 }
+
+// Event Listener
+
+agrega.addEventListener('click', guardaResultado);
+verLista.addEventListener('click', mostrarLista);
+
+//
+
+nuevaCantidad.addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){
+        guardaResultado();
+    }
+})
+
+mostrarLista();
