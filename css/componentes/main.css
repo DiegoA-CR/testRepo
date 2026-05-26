@@ -22,6 +22,7 @@ body{
     background-color: var(--fondo);
     width: 100vw;
     height: 100vh;
+    position: absolute;
 }
 
 h1{
@@ -30,17 +31,4 @@ h1{
     text-align: center;
     font-size: 60px;
     color: var(--principal);
-}
-.contenedor{
-    background-color: var(--texto1);
-    margin-top: 115px;
-    width: 100vw;
-    height: 60vh;
-    border: 1px solid var(--texto2);
-    display: flex;
-    
-}
-
-.card{
-    margin: 10px;
 }

@@ -12,6 +12,7 @@
         <!-- estilos del proyecto -->
         <link rel="stylesheet" type="text/css" href="css/componentes/main.css">
         <link rel="stylesheet" type="text/css" href="css/componentes/header.css">
+        <link rel="stylesheet" type="text/css" href="css/componentes/contenido.css">
         
         <title>Tienda</title>
     </head>
@@ -38,13 +39,14 @@
 <!-- MENU PRINCIPAL -->
     
 <div class="contenedor">
+
         <div class="card">
-            <h3 class="titulo_productos"></h3>
-            <form action="#">
-                <input type="text" id="producto"  placeholder="Producto"><br>
-                <input type="number" id="cantidad"  placeholder="Cantidad"><br>
-                <button id="agregar"> Agregar </button>
-                <button id="verLista">Ver Lista </button>
+            <h3 class="titulo_productos"> Agregar Producto </h3>
+            <form class="contend-principal" action="#">
+                <input class="contend-input-general" type="text" id="producto"  placeholder="Producto"><br>
+                <input class="contend-input-general" type="number" id="cantidad"  placeholder="Cantidad"><br>
+                <button class="boton_generico" id="agregar"> Agregar </button>
+                <button class="boton_generico" id="verLista">Ver Lista </button>
                 <br>
                 <div id="resultado"> </div>
                 <br>
