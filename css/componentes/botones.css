@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --base1: #515B48;
+    --base2: #48515B;
+    --base3: #5B4851;
+
+    --principal: #2A8A14;
+    --secundario: #142A8A;
+    --complemento: #8A142A;
+    
+    --texto1: #ffffff;
+    --texto2: #000000;
+
+    --fondo: #d0d0d0;
+}
+
+.boton_generico{
+    font-family: sans-serif;
+    font-weight: 600;
+    width: 150px;
+    height: 25px;
+    border-color: var(--principal);
+    color: var(--principal);
+    border-radius: 5px;
+    margin-top: 15px;
+
+}
