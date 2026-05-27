@@ -25,16 +25,18 @@
 }
 
 .ol-menu{
+    padding: 20px;
     background-color: var(--base2);
     list-style: none;
+    height: 4rem;
     display: flex;
     justify-content: space-evenly;
     
     }
 
 .li-menu {
+    
     font-size: 25px;
-    margin: 30px;
     gap: 10px;              
 }
 

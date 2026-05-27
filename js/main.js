@@ -5,7 +5,8 @@ const resultado = document.getElementById("resultado");
 const listaProductos = document.getElementById("listaProductos");
 const verLista = document.getElementById("verLista");
 
-class EnviaProducto {
+
+class agregaProducto {
   constructor(producto, cantidad) {
     this.producto = producto;
     this.cantidad = cantidad;
@@ -16,32 +17,44 @@ class EnviaProducto {
   }
 }
 
+
 agrega.addEventListener("click", () => {
   const producto = nuevoProducto.value;
   const cantidad = nuevaCantidad.value;
 
-  if (producto && cantidad) {
-    const objAgregarProducto = new EnviaProducto(producto, cantidad);
+  if (producto != "" && cantidad != 0) {
+
+    const objAgregarProducto = new agregaProducto(producto, cantidad);
+
     const mensaje = objAgregarProducto.datosProducto();
+    
     console.log(mensaje);
+
     resultado.textContent = mensaje;
+  
   } else {
 
-    alert("Por favor completa ambos campos");
-  
-}
+    console.log("Campos incompletos");
+  }
 
   if (resultado != 0 || null) {
-    guardaResultado += resultado;
+
+    agregaResultado += resultado;
+  
   }
+
 });
+
+
+//
+
 
 const bdProductos = [];
 const bdCantidad = [];
 
 //Funcion principal para guardar
 
-function guardaResultado() {
+function agregaResultado() {
   let gProducto = nuevoProducto.value;
   let gCantidad = nuevaCantidad.value;
 
@@ -51,7 +64,7 @@ function guardaResultado() {
     return;
   }
 
-  const objProducto = new EnviaProducto(gProducto, gCantidad);
+  const objProducto = new agregaProducto(gProducto, gCantidad);
   const mensaje = objProducto.datosProducto();
 
   //Agregamos los datos al array
@@ -61,7 +74,7 @@ function guardaResultado() {
 
   //Mostrar mensaje en el div resultado
 
-  resultado.textContent = `ok ${mensaje}`;
+  resultado.textContent = `${mensaje}`;
 
   //limpia los input
   nuevoProducto.value = "";
@@ -77,10 +90,12 @@ function guardaResultado() {
 }
 
 function mostrarLista() {
-  listaProductos.innerHTML = "";
 
+  listaProductos.innerHTML = "";
+  //en caso de no existir productos agrega
   if (bdProductos.length === 0) {
-    listaProductos.innerHTML = "<li>No hay productos guardados</li>";
+//    listaProductos.style.display = "block";
+    listaProductos.innerHTML = "<li>No hay productos agregados</li>";
     return;
   }
 
@@ -93,14 +108,14 @@ function mostrarLista() {
 
 // Event Listener
 
-agrega.addEventListener("click", guardaResultado);
+agrega.addEventListener("click", agregaResultado);
 verLista.addEventListener("click", mostrarLista);
 
 //
 
 nuevaCantidad.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    guardaResultado();
+    agregaResultado();
   }
 });
 
