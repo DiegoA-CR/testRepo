@@ -13,9 +13,12 @@
         <link rel="stylesheet" type="text/css" href="css/componentes/main.css">
         <link rel="stylesheet" type="text/css" href="css/componentes/header.css">
         <link rel="stylesheet" type="text/css" href="css/componentes/contenido.css">
-        <link rel="stylesheet" type="text/css" href="css/componentes/botones.css
-        ">
-        
+        <link rel="stylesheet" type="text/css" href="css/componentes/botones.css">
+        <link rel="stylesheet" type="text/css" href="css/componentes/animaciones.css">
+        <link rel="stylesheet " type="text/css" href="css/componentes/DisInputs.css">
+
+
+
         <title>Tienda</title>
     </head>
 
@@ -43,34 +46,31 @@
 <div class="contenedor">
 
         <div class="card">
-            <h3 class="titulo_productos"> Agregar Producto </h3>
+            
+            <h3 class="titulo-productos"> Venta </h3>
+
             <form class="contend-principal" action="#">
-                <input class="contend-input-general" type="text" id="producto"  placeholder="Producto" required><br>
-                <input class="contend-input-general" type="number" id="cantidad"  placeholder="Cantidad" required><br>
+                <input class="contend-input-general" type="text" id="producto"  placeholder="*Producto" required><br>
+                <input class="contend-input-general" type="number" id="cantidad"  placeholder="*Cantidad" required><br>
                 <button class="boton_generico" id="agregar"> Agregar </button>
                 <button class="boton_generico" id="verLista">Ver Lista </button>
                 
             </form>
-
-        <!-- termina el formulario -->
-            
-
-    </div>
+        </div>
 
     <div class="card">
         
         <p id="resultado"> </p>
         
-            <ul id="listaProductos" style="display: none;"></ul>
+            <ul id="listaProductos"></ul>
         
             <ul id="lista"></ul>
         </div>
             
-        <div class="card">3</div>
-        <div class="card">4</div>
+        
     </div>
     <footer>
-
+        <h4> V1 </h4>
     </footer>
 
     <!-- Scripts de funcionalidad -->

@@ -4,28 +4,34 @@
 }
 
 :root{
-    --base1: #515B48;
-    --base2: #48515B;
-    --base3: #5B4851;
-
-    --principal: #2A8A14;
-    --secundario: #142A8A;
-    --complemento: #8A142A;
     
-    --texto1: #ffffff;
-    --texto2: #000000;
+    --texto1: #5B4851;
+    --texto2: #2EC50D;
+    
 
-    --fondo: #d0d0d0;
+    --fondo1: #ffffff;
+    --fondo2: #000000;
+
 }
 
 .boton_generico{
+    background-color: var(--texto1);
     font-family: sans-serif;
     font-weight: 600;
-    width: 150px;
-    height: 25px;
-    border-color: var(--principal);
-    color: var(--principal);
+    font-size: 20px;
+    width: 400px;
+    height: 60px;
+    color: var(--fondo1);
     border-radius: 5px;
-    margin-top: 15px;
+    margin: 15px;
+
+}
+
+.boton_generico:hover{
+    color: var(--texto1);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: var(--fondo1);
 
 }

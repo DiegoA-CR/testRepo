@@ -84,31 +84,45 @@ function agregaResultado() {
   console.log("Todos los productos", bdProductos);
   console.log("Todas las cantidades", bdCantidad);
 
-  //mostarar los valores de los arrays
-
-  mostrarLista();
+  
 }
 
 function mostrarLista() {
+  
+  if (listaProductos.style.display === "none"  || listaProductos.style.display === "" ){
+      //mostrar lista
 
-  listaProductos.innerHTML = "";
-  //en caso de no existir productos agrega
-  if (bdProductos.length === 0) {
-//    listaProductos.style.display = "block";
-    listaProductos.innerHTML = "<li>No hay productos agregados</li>";
-    return;
-  }
+      listaProductos.style.display = "block";
 
-  for (let i = 0; i < bdProductos.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = `| Producto: ${bdProductos[i]} | Cantidad: ${bdCantidad[i]} |`;
-    listaProductos.appendChild(li);
-  }
+      // limpia y llena la lista
+      listaProductos.innerHTML = "";
+
+      //en caso de no existir productos agrega
+      if (bdProductos.length === 0) {
+        listaProductos.innerHTML = "<li>No hay productos agregados</li>";
+        return;
+      }
+
+      for (let i = 0; i < bdProductos.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `| Producto: ${bdProductos[i]} | Cantidad: ${bdCantidad[i]} |`;
+        listaProductos.appendChild(li);
+      }
+    }else{
+
+      //Ocultar lista
+      listaProductos.style.display = "none";
+    }  
+}
+
+function crearListaCompra(){
+
 }
 
 // Event Listener
 
 agrega.addEventListener("click", agregaResultado);
+
 verLista.addEventListener("click", mostrarLista);
 
 //
