@@ -24,7 +24,7 @@
 
     <body>
         
-    <h1 class="titulo_principal"> Tienda </h1>  
+    <h1> Tienda </h1>  
     <header>  
         <!--
         <button id="Menu_princ" onclick="mostrar('Menu')"> O  </button> -->
@@ -49,11 +49,14 @@
             
             <h3 class="titulo-productos"> Venta </h3>
 
-            <form class="contend-principal" action="#">
+            <form class="content-principal" action="#">
                 <input class="contend-input-general" type="text" id="producto"  placeholder="*Producto" required><br>
                 <input class="contend-input-general" type="number" id="cantidad"  placeholder="*Cantidad" required><br>
-                <button class="boton_generico" id="agregar"> Agregar </button>
-                <button class="boton_generico" id="verLista">Ver Lista </button>
+                <div class="conten-botones">
+                    <button class="boton_generico" id="agregar"> Agregar </button>
+                    <button class="boton_generico" id="verLista">Ver Lista </button>
+                </div>
+                
                 
             </form>
         </div>
@@ -62,7 +65,7 @@
         
         <p id="resultado"> </p>
         
-            <ul id="listaProductos"></ul>
+            <ul id="listaProductos" style="display: none;"></ul>
         
             <ul id="lista"></ul>
         </div>

@@ -11,7 +11,7 @@
     --fondo2: #000000;
     
 }
-
+/*
 .contend-input-general{
     font-size: large;
     width: 50vw;
@@ -20,4 +20,40 @@
     border: 3px solid var(--texto1);
     margin: 15px;
     
+}
+*/
+
+.contend-input-general{
+    width: 90%;
+    height: 60px;
+
+    padding: 0 15px;
+
+    font-size: 18px;
+    font-family: sans-serif;
+
+    color: var(--texto1);
+    background-color: var(--fondo1);
+
+    border: 1px solid var(--texto1);
+    border-radius: 10px;
+
+    margin: 15px;
+
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Cuando el usuario hace click */
+.contend-input-general:focus{
+    border-color: var(--texto1);
+    box-shadow: 0 0 10px var(--texto1);
+
+    transform: scale(1.02);
+}
+
+/* Placeholder */
+.contend-input-general::placeholder{
+    color: #999;
+    font-size: 20px;
 }

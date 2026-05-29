@@ -14,6 +14,7 @@
 
 }
 
+/*
 .boton_generico{
     background-color: var(--texto1);
     font-family: sans-serif;
@@ -34,4 +35,41 @@
     font-size: 25px;
     background-color: var(--fondo1);
 
+}
+*/
+.conten-botones{
+    /*border: 1px solid var(--fondo2);*/
+    width: 90%;
+    height: 25vh;
+    margin: 2rem;
+    display: flex;
+    
+}
+
+.boton_generico{
+    background-color: var(--texto1);
+    color: var(--fondo1);
+
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    
+    justify-content: center;
+
+    width: 340px;
+    height: 60px;
+
+    border-radius: 10px;
+    margin: 15px;
+    border: none;
+
+    cursor: pointer;
+    transition: all 0.6s ease-out;
+}
+
+.boton_generico:hover{
+    background-color: var(--fondo1);
+    color: var(--texto1);
+    border: 2px solid var(--texto1);
+    transform: scale(1.05);
 }
