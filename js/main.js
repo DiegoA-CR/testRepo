@@ -30,7 +30,7 @@ function agregaResultado() {
   let gCantidad = nuevaCantidad.value;
 
   
-  if (!gProducto || !gCantidad) {
+  if (gProducto === "" || gCantidad === 0 ) {
     alert("Complete todos los campos");
     return;
   }
@@ -83,6 +83,7 @@ function crearListaCompra(){
 
     // limpia y llena la lista
       listaProductos.innerHTML = "";
+      listaProductos.style.display = "block";
       //en caso de no existir productos agrega
       if (bdProductos.length === 0) {
         const li = document.createElement("li");
