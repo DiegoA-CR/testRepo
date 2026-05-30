@@ -3,8 +3,8 @@ const nuevaCantidad = document.getElementById("cantidad");
 const agrega = document.getElementById("agregar");
 const resultado = document.getElementById("resultado");
 const listaProductos = document.getElementById("listaProductos");
+const mostrar = document.getElementById("mostrar");
 const verLista = document.getElementById("verLista");
-
 
 class agregaProducto {
   constructor(producto, cantidad) {
@@ -16,35 +16,6 @@ class agregaProducto {
     return `Producto: ${this.producto} - Cantidad: ${this.cantidad}`;
   }
 }
-
-
-agrega.addEventListener("click", () => {
-  const producto = nuevoProducto.value;
-  const cantidad = nuevaCantidad.value;
-
-  if (producto != "" && cantidad != 0) {
-
-    const objAgregarProducto = new agregaProducto(producto, cantidad);
-
-    const mensaje = objAgregarProducto.datosProducto();
-    
-    console.log(mensaje);
-
-    resultado.textContent = mensaje;
-  
-  } else {
-
-    console.log("Campos incompletos");
-  }
-
-  if (resultado != 0 || null) {
-
-    agregaResultado += resultado;
-  
-  }
-
-});
-
 
 //
 
@@ -59,7 +30,7 @@ function agregaResultado() {
   let gCantidad = nuevaCantidad.value;
 
   
-  if (gProducto === "" || gCantidad === "") {
+  if (!gProducto || !gCantidad) {
     alert("Complete todos los campos");
     return;
   }
@@ -84,45 +55,55 @@ function agregaResultado() {
   console.log("Todos los productos", bdProductos);
   console.log("Todas las cantidades", bdCantidad);
 
-  
+  if(mostrar.style.display === "block"){
+    crearListaCompra();
+  }
+
 }
 
 function mostrarLista() {
   
-  if (listaProductos.style.display === "none"  || listaProductos.style.display === "" ){
+  const estadoVisible = mostrar.style.display === "block" ;
+
+  if (estadoVisible){
+
+    //Ocultar lista
+      mostrar.style.display = "none";
+    
+    }else{
+
       //mostrar lista
+      mostrar.style.display = "block";
+      crearListaCompra();
+      
+    }  
+}
 
-      listaProductos.style.display = "block";
+function crearListaCompra(){
 
-      // limpia y llena la lista
+    // limpia y llena la lista
       listaProductos.innerHTML = "";
-
       //en caso de no existir productos agrega
       if (bdProductos.length === 0) {
-        listaProductos.innerHTML = "<li>No hay productos agregados</li>";
+        const li = document.createElement("li");
+        li.textContent = "No hay productos agregados";
+        li.classList.add("ver-lista-productos");
+        listaProductos.appendChild(li);
         return;
       }
 
       for (let i = 0; i < bdProductos.length; i++) {
         const li = document.createElement("li");
+        li.classList.add("ver-lista-productos"); //agragar clase
         li.textContent = `| Producto: ${bdProductos[i]} | Cantidad: ${bdCantidad[i]} |`;
         listaProductos.appendChild(li);
       }
-    }else{
-
-      //Ocultar lista
-      listaProductos.style.display = "none";
-    }  
-}
-
-function crearListaCompra(){
 
 }
 
 // Event Listener
 
 agrega.addEventListener("click", agregaResultado);
-
 verLista.addEventListener("click", mostrarLista);
 
 //
@@ -133,4 +114,4 @@ nuevaCantidad.addEventListener("keypress", function (e) {
   }
 });
 
-mostrarLista();
+mostrar.style.display = "none";

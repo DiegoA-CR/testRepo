@@ -14,7 +14,7 @@
 
 .contenedor{
 
-    margin-top: 8rem;
+    margin-top: 6rem;
     width: 100vw;
     height: 70vh;
     /*border: 2px solid var(--fondo2);*/
@@ -35,7 +35,7 @@
     padding: 10px;
     border-radius: 25px;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     gap: 5;
 }
 
@@ -54,4 +54,14 @@
 .titulo-productos{
     text-align: center;
     
+}
+
+
+
+/* Quita las viñetas de los li generados */
+.ver-lista-productos{
+    list-style-type: none; /* Elimina números y viñetas */
+    padding: 0;             /* Elimina el margen izquierdo por defecto */
+    margin: 0;              /* Elimina el margen exterior */
+    color: var(--fondo2);
 }
