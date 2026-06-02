@@ -13,7 +13,11 @@ class agregaProducto {
   }
 
   datosProducto() {
+    if(this.producto.trim() === ""){
+     alert("no se aceptan espacios"); 
+    }
     return `Producto: ${this.producto} - Cantidad: ${this.cantidad}`;
+    
   }
 }
 
